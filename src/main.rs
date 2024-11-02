@@ -1,4 +1,4 @@
-fn extended_gcd(a: i64, b: i64) -> (i64, i64, i64) {
+fn extended_gcd(a: i128, b: i128) -> (i128, i128, i128) {
     if b == 0 {
         (a, 1, 0)
     } else {
@@ -7,7 +7,7 @@ fn extended_gcd(a: i64, b: i64) -> (i64, i64, i64) {
     }
 }         
 
-fn mod_inverse(a: i64, m: i64) -> Option<i64> {
+fn mod_inverse(a: i128, m: i128) -> Option<i128> {
     let (g, x, _) = extended_gcd(a, m);
     if g != 1 {
         None // No modular inverse if gcd(a, m) != 1
@@ -17,8 +17,8 @@ fn mod_inverse(a: i64, m: i64) -> Option<i64> {
 }
 
 fn main() {
-    let a = 5;
-    let m = 12;
+    let a = 11;
+    let m = 17;
     match mod_inverse(a, m) {
         Some(inv) => println!("The modular inverse of {} modulo {} is {}", a, m, inv),
         None => println!("The modular inverse does not exist"),

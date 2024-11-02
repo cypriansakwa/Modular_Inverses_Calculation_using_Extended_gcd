@@ -3,5 +3,5 @@
 version = 3
 
 [[package]]
-name = "Modular_Inverse"
+name = "Modular_Inverses_Calculation_using_Extended_gcd"
 version = "0.1.0"
